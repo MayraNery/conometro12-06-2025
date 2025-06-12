@@ -52,6 +52,3 @@ function formatarTempo(segundosTotais){
 function atualizaDisplay(){
     display.textContent = formatarTempo(segundos);
 }
-
-
-
