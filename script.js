@@ -8,7 +8,7 @@ const pauseBtn = document.getElementById("pauseBtn");
 const resetBtn = document.getElementById("resetBtn");
 
 //botao star
-starBtn.addEventListener("click", iniciarCronometro)
+startBtn.addEventListener("click", iniciarCronometro)
 
 //botao pause
 pauseBtn.addEventListener("click", pausarCronometro)
@@ -35,17 +35,17 @@ function pausarCronometro(){
 
 //funçao de resetar
 function resetCronometro(){
-    pausarCronometro(){
-        segundos = 0;
-        atualizaDisplay();
-    }
+    pausarCronometro()
+    segundos = 0;
+    atualizaDisplay();
+    
 }
  
 //funçao e formatar o tempo
 function formatarTempo(segundosTotais){
    const minutos = Math.floor(segundosTotais / 60);
    const segundos = segundosTotais % 60;
-   return '${String(minutos).padStart(2, '0')}:${String(segunos)}
+   return `${String(minutos).padStart(2,'0')}:${String(segundos).padStart(2,'0')}`
 }
 
 //funçao que envia o tempo para a pagina
